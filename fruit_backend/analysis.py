@@ -17,10 +17,9 @@ from .images import prepare_image
 from .prompts import PROMPT_VERSION, SYSTEM_PROMPT, USER_PROMPT
 from .schemas import AnalysisMetadata, AnalysisResult, Assessment, response_json_schema
 
-MODEL = "qwen3-vl:4b"
+MODEL = "qwen3-vl:4b-instruct"
 HOST = "http://127.0.0.1:11434"
-# Thinking is explicit and separate from the final JSON in message.content.
-# 768 tokens truncated JSON; reserve room for both thinking and the final response.
+# Instruct variant produces a direct, schema-constrained final response.
 GENERATION_OPTIONS: dict[str, int | float] = {
     "temperature": 0.1, "top_p": 0.95, "top_k": 20,
     "repeat_penalty": 1.0, "presence_penalty": 0.0, "seed": 1234,
@@ -84,7 +83,6 @@ class FruitAnalyzer:
             ],
             format=schema,
             stream=False,
-            think=False,
             keep_alive="5m",
             options=GENERATION_OPTIONS,
         ))
@@ -114,12 +112,12 @@ class FruitAnalyzer:
                 inference_seconds=round(inference_seconds, 4),
                 model_load_seconds=(response.load_duration / 1_000_000_000 if response.load_duration is not None else None),
                 output_tokens=response.eval_count,
-                generation_options={**GENERATION_OPTIONS, "think": True},
+                generation_options={**GENERATION_OPTIONS, "think": False},
                 thinking_output_present=bool(response.message.thinking),
             ),
         )
 
 
 def analyze_image(image_bytes: bytes) -> AnalysisResult:
-    """Analyze one image using the local qwen3-vl:4b model."""
+    """Analyze one image using the local qwen3-vl:4b-instruct model."""
     return FruitAnalyzer().analyze_image(image_bytes)

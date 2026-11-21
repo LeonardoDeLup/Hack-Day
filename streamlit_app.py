@@ -1,8 +1,6 @@
 """Second Life: a local fruit assessment and recipe companion."""
 
 from hashlib import sha256
-from pathlib import Path
-
 import streamlit as st
 
 from fruit_backend.analysis import FruitAnalyzer
@@ -35,11 +33,14 @@ def get_analyzer() -> FruitAnalyzer:
     return FruitAnalyzer()
 
 
-def clear_result_for_new_upload(upload_hash: str | None) -> None:
-    if upload_hash != st.session_state.current_upload_hash:
-        st.session_state.current_upload_hash = upload_hash
-        st.session_state.analysis_result = None
-        st.session_state.analysis_error = None
+def clear_result_for_new_upload(upload_hash: str | None) -> bool:
+    """Reset stale results and request analysis only when the image changes."""
+    if upload_hash == st.session_state.current_upload_hash:
+        return False
+    st.session_state.current_upload_hash = upload_hash
+    st.session_state.analysis_result = None
+    st.session_state.analysis_error = None
+    return upload_hash is not None
 
 
 def friendly_ripeness(ripeness: str) -> str:
@@ -74,27 +75,42 @@ def render_header() -> None:
         st.markdown("Photograph one fruit. We’ll read its ripeness, then suggest what to make next.")
     with header_right:
         st.caption(":material/lock: local model", unsafe_allow_html=False)
-        st.caption("Qwen3-VL 4B")
+        st.caption("Qwen3-VL 4B Instruct")
 
 
 def render_upload() -> bytes | None:
     with st.container(border=True):
         st.subheader("Start with one fruit", anchor=False)
         st.caption("A clear, well-lit photo works best. One fruit per image keeps the assessment focused.")
-        uploaded = st.file_uploader(
-            "Upload a fruit photo",
-            type=["jpg", "jpeg", "png", "webp"],
-            max_upload_size=10,
-            accept_multiple_files=False,
-            key="fruit_upload",
-            help="JPEG, PNG, or WebP up to 10 MiB.",
+
+        source = st.segmented_control(
+            "Choose a photo source",
+            options=["Upload photo", "Use camera"],
+            default="Upload photo",
+            key="photo_source",
         )
+
+        if source == "Use camera":
+            uploaded = st.camera_input("Take a photo of your fruit", key="fruit_camera")
+            empty_message = "Allow camera access, then take a picture to analyze it automatically."
+        else:
+            uploaded = st.file_uploader(
+                "Upload a fruit photo",
+                type=["jpg", "jpeg", "png", "webp"],
+                max_upload_size=10,
+                accept_multiple_files=False,
+                key="fruit_upload",
+                help="JPEG, PNG, or WebP up to 10 MiB.",
+            )
+            empty_message = "Drop a photo here to start analyzing automatically."
+
         if uploaded is None:
-            st.info("Drop a photo here, then choose Analyze this fruit.", icon=":material/upload:")
+            st.info(empty_message, icon=":material/add_a_photo:")
             return None
 
         image_bytes = uploaded.getvalue()
-        st.image(image_bytes, width="stretch", alt="Uploaded fruit photo")
+        st.image(image_bytes, width="stretch", alt="Fruit photo selected for analysis")
+        st.caption("Analyzed locally with Qwen3-VL 4B Instruct.")
         return image_bytes
 
 
@@ -204,7 +220,7 @@ def render_error(error: AnalysisError | None) -> None:
     messages = {
         "invalid_image": ("That image needs another look", "Upload an intact JPEG, PNG, or WebP under 10 MiB."),
         "service_unavailable": ("The local model is offline", "Start Ollama with `ollama serve`, then try again."),
-        "model_missing": ("The fruit model is not installed", "Install `qwen3-vl:4b` in Ollama, then try again."),
+        "model_missing": ("The fruit model is not installed", "Install `qwen3-vl:4b-instruct` in Ollama, then try again."),
         "timeout": ("The local model took too long", "Check system load and retry the analysis."),
         "invalid_model_output": ("The model could not finish an assessment", "Try the same photo again or upload a clearer one."),
         "inference_failed": ("The local model returned an error", "Check Ollama and retry the analysis."),
@@ -216,61 +232,38 @@ def render_error(error: AnalysisError | None) -> None:
 initialize_state()
 render_header()
 
-upload_hash: str | None = None
 left, right = st.columns([1.05, 0.95], gap="large", vertical_alignment="top")
 with left:
     image_bytes = render_upload()
-    upload_hash = sha256(image_bytes).hexdigest() if image_bytes else None
-clear_result_for_new_upload(upload_hash)
+    upload_hash = sha256(image_bytes).hexdigest() if image_bytes is not None else None
+    should_analyze = clear_result_for_new_upload(upload_hash)
+
 with right:
+    assessment_slot = st.empty()
+
+# Streamlit reruns when a new upload is selected or a camera photo is captured.
+# The hash check prevents re-inference on subsequent UI reruns.
+if should_analyze and image_bytes is not None:
+    with assessment_slot.container():
+        process = st.status("Reading your fruit…", expanded=True)
+        try:
+            with process:
+                st.write("Analyzing the image locally with Qwen3-VL 4B Instruct…")
+                result = ui_services.analyze_uploaded_image(image_bytes, get_analyzer())
+            st.session_state.analysis_result = result
+            st.session_state.analysis_error = None
+            process.update(label="Assessment ready", state="complete", expanded=False)
+        except AnalysisError as error:
+            st.session_state.analysis_result = None
+            st.session_state.analysis_error = error
+            process.update(label="Assessment stopped", state="error", expanded=False)
+
+    # The upload hash is already stored, so this rerun only displays the result.
+    st.rerun()
+
+with assessment_slot.container():
     render_assessment(st.session_state.analysis_result)
-
-if image_bytes:
-    action_left, action_right = st.columns([1, 1], vertical_alignment="bottom")
-    with action_left:
-        analyze_clicked = st.button("Analyze this fruit", type="primary", width="stretch", icon=":material/search:", key="analyze_button")
-    with action_right:
-        st.caption("Your photo is processed by the local Qwen3-VL model.")
-else:
-    analyze_clicked = False
-
-if analyze_clicked and image_bytes:
-    process = st.status("Reading your fruit…", expanded=True)
-    try:
-        
-        with process:
-            import time
-
-            start = time.perf_counter()
-
-            st.write("Initializing fruit analyzer...")
-            analyzer = get_analyzer()
-
-            print(
-                f"Analyzer initialized in {time.perf_counter() - start:.1f}s",
-                flush=True
-            )
-
-            st.write("Sending image to Qwen3-VL...")
-            result = ui_services.analyze_uploaded_image(
-                image_bytes, analyzer
-            )
-
-            print(
-                f"Analysis finished in {time.perf_counter() - start:.1f}s",
-                flush=True
-            )
-
-        process.update(label="Assessment ready", state="complete", expanded=False)
-        st.session_state.analysis_result = result
-        st.session_state.analysis_error = None
-        st.rerun()
-    except AnalysisError as error:
-        process.update(label="Assessment stopped", state="error", expanded=True)
-        st.session_state.analysis_result = None
-        st.session_state.analysis_error = error
-
-render_error(st.session_state.analysis_error)
+    render_error(st.session_state.analysis_error)
 
 st.space("large")
 render_recipes(st.session_state.analysis_result.assessment if st.session_state.analysis_result else None)

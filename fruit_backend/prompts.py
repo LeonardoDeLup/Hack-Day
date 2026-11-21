@@ -25,6 +25,17 @@ Visible spoilage is separate: none_observed, possible (suspicious damage), clear
 Give 1-3 brief visible observations and a short explanation. Do not infer smell,
 firmness, taste, storage history, or hidden flesh. Never claim food safety, edibility,
 shelf life, numerical confidence, or provide recipes.
+
+OUTPUT REQUIREMENTS:
+- Return only the structured JSON assessment.
+- Include at most 3 observations.
+- Each observation must be 12 words or fewer.
+- The explanation must be 25 words or fewer.
+- Avoid repetition.
+- If mold or obvious spoilage is visible, prioritize
+  reporting it even when fruit identity is uncertain.
+- Do not invent details that cannot be seen.
+- Do not guarantee food safety.
 """
 
 USER_PROMPT = "Assess this image. Return status, fruit_name, ripeness, visible_spoilage, observations, and explanation as JSON."
