@@ -66,12 +66,16 @@ class FruitAnalyzer:
 
     def analyze_image(self, image_bytes: bytes) -> AnalysisResult:
         started = time.perf_counter()
+        print("1. Preparing image...", flush=True)
         prepared = prepare_image(image_bytes)
+        print(f"2. Image prepared: {prepared.width}x{prepared.height}", flush=True)
         if self._model_digest is None:
+            print("3. Checking installed model...", flush=True)
             self.check_model()
         schema = response_json_schema()
         user_prompt = USER_PROMPT
         inference_started = time.perf_counter()
+        print("4. Starting Ollama inference...", flush=True)
         response = _request(lambda: self._client.chat(
             model=MODEL,
             messages=[
@@ -85,6 +89,7 @@ class FruitAnalyzer:
             options=GENERATION_OPTIONS,
         ))
         inference_seconds = time.perf_counter() - inference_started
+        print("5. Ollama inference completed!", flush=True)
         if response.done_reason == "length":
             raise InvalidModelOutputError(
                 f"The model reached its generation limit ({response.eval_count} tokens) before finishing the assessment. Retry explicitly."

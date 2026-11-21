@@ -218,9 +218,30 @@ else:
 if analyze_clicked and image_bytes:
     process = st.status("Reading your fruit…", expanded=True)
     try:
+        
         with process:
-            st.write("Checking the image and its visible cues…")
-            result = ui_services.analyze_uploaded_image(image_bytes, get_analyzer())
+            import time
+
+            start = time.perf_counter()
+
+            st.write("Initializing fruit analyzer...")
+            analyzer = get_analyzer()
+
+            print(
+                f"Analyzer initialized in {time.perf_counter() - start:.1f}s",
+                flush=True
+            )
+
+            st.write("Sending image to Qwen3-VL...")
+            result = ui_services.analyze_uploaded_image(
+                image_bytes, analyzer
+            )
+
+            print(
+                f"Analysis finished in {time.perf_counter() - start:.1f}s",
+                flush=True
+            )
+
         process.update(label="Assessment ready", state="complete", expanded=False)
         st.session_state.analysis_result = result
         st.session_state.analysis_error = None
