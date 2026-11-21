@@ -1,0 +1,21 @@
+[theme]
+base = "light"
+primaryColor = "#4C7A52"
+backgroundColor = "#F4F0E6"
+secondaryBackgroundColor = "#EAE6DA"
+textColor = "#1F2A24"
+borderColor = "#C9D2C2"
+font = "Avenir Next"
+headingFont = "Georgia"
+baseRadius = "medium"
+buttonRadius = "medium"
+showWidgetBorder = true
+showSidebarBorder = false
+paddingTop = "2rem"
+paddingBottom = "3rem"
+
+[theme.sidebar]
+backgroundColor = "#EAE6DA"
+secondaryBackgroundColor = "#F4F0E6"
+textColor = "#1F2A24"
+borderColor = "#C9D2C2"
