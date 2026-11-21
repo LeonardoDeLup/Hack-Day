@@ -22,9 +22,9 @@ HOST = "http://127.0.0.1:11434"
 # Thinking is explicit and separate from the final JSON in message.content.
 # 768 tokens truncated JSON; reserve room for both thinking and the final response.
 GENERATION_OPTIONS: dict[str, int | float] = {
-    "temperature": 0.6, "top_p": 0.95, "top_k": 20,
+    "temperature": 0.1, "top_p": 0.95, "top_k": 20,
     "repeat_penalty": 1.0, "presence_penalty": 0.0, "seed": 1234,
-    "num_ctx": 8192, "num_predict": 4096,
+    "num_ctx": 4096, "num_predict": 1024,
 }
 T = TypeVar("T")
 
@@ -84,7 +84,7 @@ class FruitAnalyzer:
             ],
             format=schema,
             stream=False,
-            think=True,
+            think=False,
             keep_alive="5m",
             options=GENERATION_OPTIONS,
         ))

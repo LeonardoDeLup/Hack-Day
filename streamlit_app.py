@@ -108,14 +108,33 @@ def render_assessment(result: AnalysisResult | None) -> None:
 
         assessment = result.assessment
         if assessment.status != "assessed":
-            message = {
+            titles = {
+                "no_fruit": "Not Identified",
+                "multiple_fruits": "Multiple Fruits Detected",
+                "unclear_image": "Unable to Identify",
+            }
+
+            messages = {
                 "no_fruit": "I couldn’t find a fruit in that image.",
                 "multiple_fruits": "Please upload one fruit at a time.",
-                "unclear_image": "The image needs a clearer view of the fruit.",
-            }.get(assessment.status, "I couldn’t assess this image.")
-            st.warning(message, icon=":material/photo_camera:")
+                "unclear_image": "Try uploading a clearer photograph.",
+            }
+
+            st.markdown(
+                f"## {titles.get(assessment.status, 'Not Identified')}"
+            )
+
+            st.warning(
+                messages.get(
+                    assessment.status,
+                    "I couldn’t assess this image."
+                ),
+                icon=":material/photo_camera:"
+            )
+
             for observation in assessment.observations:
                 st.markdown(f"- {observation}")
+
             st.write(assessment.explanation)
             return
 
