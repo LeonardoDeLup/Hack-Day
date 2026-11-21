@@ -1,0 +1,132 @@
+[
+  {
+    "id": "multiple-bananas",
+    "file": "images/multiple-bananas.jpg",
+    "sha256": "5a961e2b2cd7e1c6e4a522bfbd44e79d631b3ee3fe11318d426bbe9c0a5971a2",
+    "split": "development",
+    "source_group": "commons-1",
+    "expected_status": "multiple_fruits",
+    "expected_fruit": null,
+    "fruit_aliases": [],
+    "expected_ripeness": "uncertain",
+    "expected_visible_spoilage": "uncertain",
+    "label_note": "Many fruit instances; reject without choosing the main one.",
+    "source": {
+      "title": "Green banana.jpg",
+      "author": "Kellychard kariuki",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Green_banana.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Green_banana.jpg/960px-Green_banana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "modifications": {
+        "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+        "crop_xyxy": null,
+        "degradation": null,
+        "encoding": "RGB JPEG quality 95"
+      }
+    },
+    "result": null,
+    "error": {
+      "code": "invalid_model_output",
+      "message": "The model response failed assessment validation. Retry explicitly."
+    }
+  },
+  {
+    "id": "strawberry-half",
+    "file": "images/strawberry-half.jpg",
+    "sha256": "54124a0897dcec74b247bf05d718df51d1ed97a63225a84c749def99a9fdd16d",
+    "split": "development",
+    "source_group": "commons-14",
+    "expected_status": "assessed",
+    "expected_fruit": "strawberry",
+    "fruit_aliases": [],
+    "expected_ripeness": "ripe",
+    "expected_visible_spoilage": "none_observed",
+    "label_note": "One cut half with red exterior and light central flesh.",
+    "source": {
+      "title": "Garden strawberry (Fragaria \u00d7 ananassa) halved.jpg",
+      "author": "\nIvar Leidus",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_halved.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_halved.jpg/960px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_halved.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "modifications": {
+        "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+        "crop_xyxy": null,
+        "degradation": null,
+        "encoding": "RGB JPEG quality 95"
+      }
+    },
+    "result": {
+      "assessment": {
+        "status": "assessed",
+        "fruit_name": "strawberry",
+        "ripeness": "ripe",
+        "visible_spoilage": "possible",
+        "observations": [
+          "Cut strawberry with bright red exterior, white interior, brownish central cavity"
+        ],
+        "explanation": "Ripe due to bright red color; brown discoloration in the central cavity may indicate possible spoilage."
+      },
+      "metadata": {
+        "model": "qwen3-vl:4b",
+        "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+        "prompt_version": "fruit-v4",
+        "prompt_sha256": "6b84af58c32f6a41fde4bd3cfdd4408b82dcb7f15ce2e96e5e8f5e3843fe1ff2",
+        "image_sha256": "54124a0897dcec74b247bf05d718df51d1ed97a63225a84c749def99a9fdd16d",
+        "prepared_image_sha256": "b23086a682e3ee82c741fc2296417825c67980a66984159d311efaad06c1489c",
+        "prepared_width": 960,
+        "prepared_height": 640,
+        "elapsed_seconds": 48.8092,
+        "inference_seconds": 48.8034,
+        "model_load_seconds": 0.004144583,
+        "output_tokens": 1885,
+        "generation_options": {
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "seed": 1234,
+          "num_ctx": 8192,
+          "num_predict": 4096,
+          "think": true
+        },
+        "thinking_output_present": true
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "unreadable-banana",
+    "file": "images/unreadable-banana.jpg",
+    "sha256": "0cfd88ad32c0340e02b87475aa92f0b657558ee5e664743c6b1c4328cd15b580",
+    "split": "development",
+    "source_group": "commons-0",
+    "expected_status": "unclear_image",
+    "expected_fruit": null,
+    "fruit_aliases": [],
+    "expected_ripeness": "uncertain",
+    "expected_visible_spoilage": "uncertain",
+    "label_note": "Synthetic severe loss of image detail; kept in same split as original.",
+    "source": {
+      "title": "Banana-Single.jpg",
+      "author": "Evan-Amos",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Banana-Single.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/960px-Banana-Single.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "modifications": {
+        "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+        "crop_xyxy": null,
+        "degradation": "downsample_3x3_then_upscale",
+        "encoding": "RGB JPEG quality 95"
+      }
+    },
+    "result": null,
+    "error": {
+      "code": "invalid_model_output",
+      "message": "The model response failed assessment validation. Retry explicitly."
+    }
+  }
+]

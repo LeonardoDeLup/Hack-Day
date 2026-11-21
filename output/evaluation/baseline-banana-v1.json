@@ -1,0 +1,29 @@
+{
+  "assessment": {
+    "status": "assessed",
+    "fruit_name": "banana",
+    "ripeness": "ripe",
+    "visible_spoilage": "none_observed",
+    "observations": [
+      "Uniform yellow skin with minor brown spots",
+      "Curved shape typical of bananas",
+      "Smooth surface with no significant blemishes",
+      "Stem end shows slight browning"
+    ],
+    "explanation": "A single banana with uniform yellow skin, minor brown spots, curved shape, and smooth surface. No visible mold or spoilage."
+  },
+  "metadata": {
+    "model": "qwen3-vl:4b",
+    "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+    "prompt_version": "fruit-v1",
+    "prompt_sha256": "fe8072d0bd5de38827465409b6a92f995fb269478b5bc690ada1468751c0d9be",
+    "image_sha256": "6f990f58cf30c8226666ec63e4e7b9433bfe1aba4b92fb279f35790f35efc443",
+    "prepared_image_sha256": "43a8e78c6abfda7541430ba22563e94160da06728415e44863d7db5fbb42188c",
+    "prepared_width": 960,
+    "prepared_height": 846,
+    "elapsed_seconds": 17.9556,
+    "inference_seconds": 17.899,
+    "model_load_seconds": 2.831350208,
+    "output_tokens": 427
+  }
+}

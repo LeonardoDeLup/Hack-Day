@@ -1,0 +1,38 @@
+{
+  "assessment": {
+    "status": "multiple_fruits",
+    "fruit_name": null,
+    "ripeness": "uncertain",
+    "visible_spoilage": "uncertain",
+    "observations": [
+      "Bunch of green bananas"
+    ],
+    "explanation": "Multiple green bananas; green color indicates unripe status; no visible spoilage."
+  },
+  "metadata": {
+    "model": "qwen3-vl:4b",
+    "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+    "prompt_version": "fruit-v5",
+    "prompt_sha256": "34c83620b8ea5b8e22da9fe7555252a0c728512f103e7f6779a9f9ae1932f236",
+    "image_sha256": "5a961e2b2cd7e1c6e4a522bfbd44e79d631b3ee3fe11318d426bbe9c0a5971a2",
+    "prepared_image_sha256": "05a5c3548728bff5c7d0150fa33f68589c448d5307bb21e689ec264ab025a278",
+    "prepared_width": 960,
+    "prepared_height": 541,
+    "elapsed_seconds": 5.3367,
+    "inference_seconds": 5.2818,
+    "model_load_seconds": 0.014322875,
+    "output_tokens": 206,
+    "generation_options": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "seed": 1234,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "think": true
+    },
+    "thinking_output_present": true
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "created_at_utc": "2026-11-21T19:41:05.501506+00:00",
+  "manifest_sha256": "7b654353010e6f373ae8e53a66680828174747740c553e1cbdd1411202a3fe31",
+  "prompt_version": "fruit-v5",
+  "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+  "generation_options": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234,
+    "num_ctx": 8192,
+    "num_predict": 4096,
+    "think": true
+  },
+  "split": "held_out",
+  "complete": false,
+  "records": [
+    {
+      "id": "banana-damaged",
+      "file": "images/banana-damaged.jpg",
+      "sha256": "e8d09e61a5041bfcdda23433fbafa9842cf7d3d0a82e875e3dcaf80f6b1c6db0",
+      "split": "held_out",
+      "source_group": "commons-3",
+      "expected_status": "assessed",
+      "expected_fruit": "banana",
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "possible",
+      "label_note": "Long damaged peel and yellow color do not cleanly distinguish bruising from advanced ripening.",
+      "source": {
+        "title": "Overripe banana 20211221 152406.jpg",
+        "author": "GALAXY 2018 A7",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Overripe_banana_20211221_152406.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Overripe_banana_20211221_152406.jpg/960px-Overripe_banana_20211221_152406.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "banana",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "yellow peel with scattered brown spots",
+            "intact skin",
+            "no visible mold or decay"
+          ],
+          "explanation": "Yellow color indicates ripeness; minor brown spots are not extensive enough to suggest overripeness or spoilage."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v5",
+          "prompt_sha256": "34c83620b8ea5b8e22da9fe7555252a0c728512f103e7f6779a9f9ae1932f236",
+          "image_sha256": "e8d09e61a5041bfcdda23433fbafa9842cf7d3d0a82e875e3dcaf80f6b1c6db0",
+          "prepared_image_sha256": "3c243132c0b379daf7acce0de551e1ac6c28311f89cda3ec5229166ed5e27b86",
+          "prepared_width": 960,
+          "prepared_height": 509,
+          "elapsed_seconds": 12.6119,
+          "inference_seconds": 12.6025,
+          "model_load_seconds": 0.006643042,
+          "output_tokens": 448,
+          "generation_options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "seed": 1234,
+            "num_ctx": 8192,
+            "num_predict": 4096,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "apple-damaged",
+      "file": "images/apple-damaged.jpg",
+      "sha256": "8a66fac7fcc0e95e4739c65d945de9c6cb7f273d4947a5e353d6cec2dca9a2c9",
+      "split": "held_out",
+      "source_group": "commons-8",
+      "expected_status": "assessed",
+      "expected_fruit": "apple",
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "possible",
+      "label_note": "Large cavity and discoloration; visible damage is clearer than ripeness.",
+      "source": {
+        "title": "Rotten Apple 03.jpg",
+        "author": "Shams948",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Rotten_Apple_03.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Rotten_Apple_03.jpg/960px-Rotten_Apple_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "apple",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Cut apple half with large bite mark",
+            "Light yellow skin with red patches",
+            "Intact skin outside bite area"
+          ],
+          "explanation": "Ripeness is indicated by the yellow-red color, which is typical for ripe apples. The large bite mark is a natural feature, not spoilage. No mold or decay is visible."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v5",
+          "prompt_sha256": "34c83620b8ea5b8e22da9fe7555252a0c728512f103e7f6779a9f9ae1932f236",
+          "image_sha256": "8a66fac7fcc0e95e4739c65d945de9c6cb7f273d4947a5e353d6cec2dca9a2c9",
+          "prepared_image_sha256": "ec35b91237471b1408ce3b60aa3b7f047d23e346ff1709fc3b3c27f9dfd236de",
+          "prepared_width": 960,
+          "prepared_height": 834,
+          "elapsed_seconds": 12.593,
+          "inference_seconds": 12.5857,
+          "model_load_seconds": 0.002531959,
+          "output_tokens": 435,
+          "generation_options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "seed": 1234,
+            "num_ctx": 8192,
+            "num_predict": 4096,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "orange-mold",
+      "file": "images/orange-mold.jpg",
+      "sha256": "4329f721b502a3e7f2f5c5c611f71bbcac841f9fcf3a4679e55441abccf2ea19",
+      "split": "held_out",
+      "source_group": "commons-12",
+      "expected_status": "assessed",
+      "expected_fruit": "orange",
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "clear",
+      "label_note": "Visible mold on peeled citrus; peel pieces belong to the single fruit. Spoilage does not establish maturity.",
+      "source": {
+        "title": "Still Life Photography Rotten Orange.jpg",
+        "author": "Jubair Bin Iqbal",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Still_Life_Photography_Rotten_Orange.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Still_Life_Photography_Rotten_Orange.jpg/960px-Still_Life_Photography_Rotten_Orange.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "lime",
+          "ripeness": "unripe",
+          "visible_spoilage": "clear",
+          "observations": [
+            "Green fruit with mold spots",
+            "Rind pieces showing brown discoloration and separation"
+          ],
+          "explanation": "The green fruit is a lime, typically unripe when green. Visible mold on the fruit indicates clear spoilage. Rind pieces exhibit brown discoloration and separation, consistent with decay."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v5",
+          "prompt_sha256": "34c83620b8ea5b8e22da9fe7555252a0c728512f103e7f6779a9f9ae1932f236",
+          "image_sha256": "4329f721b502a3e7f2f5c5c611f71bbcac841f9fcf3a4679e55441abccf2ea19",
+          "prepared_image_sha256": "fa2d16076db3164d01992479da472f2b976c1bfccf93a37ea8a34add1850f26e",
+          "prepared_width": 960,
+          "prepared_height": 640,
+          "elapsed_seconds": 47.7298,
+          "inference_seconds": 47.7182,
+          "model_load_seconds": 0.002817834,
+          "output_tokens": 1799,
+          "generation_options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "seed": 1234,
+            "num_ctx": 8192,
+            "num_predict": 4096,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "strawberry-pale",
+      "file": "images/strawberry-pale.jpg",
+      "sha256": "41ad91e9c31eaaca6b95de41c663c81361aa244f7c715187343de163fe11ab23",
+      "split": "held_out",
+      "source_group": "commons-30",
+      "expected_status": "assessed",
+      "expected_fruit": "strawberry",
+      "fruit_aliases": [],
+      "expected_ripeness": "unripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Pale green-white developing strawberry; tightly cropped low-resolution held-out example.",
+      "source": {
+        "title": "-2020-06-06 Strawberry plant with unripe fruit, (Fragaria × ananassa), Trimingham.JPG",
+        "author": "\n\n\n\nKolforn (Kolforn)\nI'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope.\n\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:-2020-06-06_Strawberry_plant_with_unripe_fruit,_(Fragaria_%C3%97_ananassa),_Trimingham.JPG",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/-2020-06-06_Strawberry_plant_with_unripe_fruit%2C_%28Fragaria_%C3%97_ananassa%29%2C_Trimingham.JPG/960px--2020-06-06_Strawberry_plant_with_unripe_fruit%2C_%28Fragaria_%C3%97_ananassa%29%2C_Trimingham.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": [
+            352,
+            600,
+            425,
+            709
+          ],
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "strawberry",
+          "ripeness": "unripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Green and red coloration, visible seeds, no spoilage"
+          ],
+          "explanation": "Strawberries are typically green when unripe; the dominant green color indicates unripe status. No spoilage is visible."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v5",
+          "prompt_sha256": "34c83620b8ea5b8e22da9fe7555252a0c728512f103e7f6779a9f9ae1932f236",
+          "image_sha256": "41ad91e9c31eaaca6b95de41c663c81361aa244f7c715187343de163fe11ab23",
+          "prepared_image_sha256": "2cc10227b4f02edd8880aed8fa5bd6b9d91b4495a40013cd3cb8602f4ba1beb6",
+          "prepared_width": 73,
+          "prepared_height": 109,
+          "elapsed_seconds": 44.2217,
+          "inference_seconds": 44.2188,
+          "model_load_seconds": 0.000510625,
+          "output_tokens": 1712,
+          "generation_options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "seed": 1234,
+            "num_ctx": 8192,
+            "num_predict": 4096,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    }
+  ],
+  "label_basis": "Implementation-assistant visual review before inference; provisional appearance labels, not expert, laboratory maturity, or food-safety ground truth.",
+  "summary": {
+    "cases": 4,
+    "operational_errors": 0,
+    "invalid_outputs": 0,
+    "status": {
+      "correct": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "fruit_identification": {
+      "correct": 3,
+      "total": 4,
+      "rate": 0.75
+    },
+    "ripeness_on_assessable_images": {
+      "correct": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    "abstentions_on_assessable_ripeness": 0,
+    "uncertainty_on_ambiguous_ripeness": {
+      "correct": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    "visible_spoilage": {
+      "correct": 1,
+      "total": 4,
+      "rate": 0.25
+    },
+    "scene_rejection": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "first_inference_seconds": 12.6025,
+    "subsequent_median_seconds": 44.2188,
+    "max_inference_seconds": 47.7182
+  }
+}

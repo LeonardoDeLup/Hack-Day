@@ -1,0 +1,759 @@
+{
+  "created_at_utc": "2026-11-21T19:12:58.373193+00:00",
+  "manifest_sha256": "7b654353010e6f373ae8e53a66680828174747740c553e1cbdd1411202a3fe31",
+  "prompt_version": "fruit-v3",
+  "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+  "split": "development",
+  "complete": true,
+  "records": [
+    {
+      "id": "banana-yellow",
+      "file": "images/banana-yellow.jpg",
+      "sha256": "8314b2a29230ce04ff96063550df1eca8c389db672ca31ed88a47c8c1e0d22fe",
+      "split": "development",
+      "source_group": "commons-0",
+      "expected_status": "assessed",
+      "expected_fruit": "banana",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Yellow peel with only small brown specks; visual maturity label.",
+      "source": {
+        "title": "Banana-Single.jpg",
+        "author": "Evan-Amos",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Banana-Single.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/960px-Banana-Single.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "banana",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Yellow skin with minor brown speckles",
+            "Smooth surface",
+            "Curved shape",
+            "Intact stem"
+          ],
+          "explanation": "Single banana with yellow skin, minor brown speckles, smooth surface, intact stem. No visible spoilage."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "8314b2a29230ce04ff96063550df1eca8c389db672ca31ed88a47c8c1e0d22fe",
+          "prepared_image_sha256": "7f4c926cafb3432b4e6f5f4b1b0347e0f32e160e3eed20ce8ed9df796ed9423b",
+          "prepared_width": 960,
+          "prepared_height": 846,
+          "elapsed_seconds": 14.7327,
+          "inference_seconds": 14.7177,
+          "model_load_seconds": 0.011756708,
+          "output_tokens": 451,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "banana-dark",
+      "file": "images/banana-dark.jpg",
+      "sha256": "f2baac9a6d789ebbe150c72dc390b0121ffbf5e3f5b071754f4a1e05a771df08",
+      "split": "development",
+      "source_group": "commons-4",
+      "expected_status": "assessed",
+      "expected_fruit": "banana",
+      "fruit_aliases": [],
+      "expected_ripeness": "overripe",
+      "expected_visible_spoilage": "possible",
+      "label_note": "Extensive darkening/shriveling; no claim about internal condition or edibility.",
+      "source": {
+        "title": "Extremely overripe banana.jpg",
+        "author": "Park taeho",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Extremely_overripe_banana.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Extremely_overripe_banana.jpg/960px-Extremely_overripe_banana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "banana",
+          "ripeness": "overripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Dark brown skin with lighter patches",
+            "Dried, brown stem",
+            "Curved shape",
+            "Smooth surface"
+          ],
+          "explanation": "The banana shows advanced ripening signs (dark brown skin, dried stem) indicating overripeness. No visible mold or decomposed tissue, so no spoilage."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "f2baac9a6d789ebbe150c72dc390b0121ffbf5e3f5b071754f4a1e05a771df08",
+          "prepared_image_sha256": "cacdaa0a6c08640560cf547534664183dcae8d1bb069e851fe0c4527b50c1eb4",
+          "prepared_width": 960,
+          "prepared_height": 1200,
+          "elapsed_seconds": 32.8719,
+          "inference_seconds": 32.8537,
+          "model_load_seconds": 0.002263583,
+          "output_tokens": 1164,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "apple-red",
+      "file": "images/apple-red.jpg",
+      "sha256": "f794efc4579fcf9f22ac69ce100191220f65162ac44609adf059ed00102f5f11",
+      "split": "development",
+      "source_group": "commons-5",
+      "expected_status": "assessed",
+      "expected_fruit": "apple",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Full-colored mature-looking red apple; provisional visual ripeness label.",
+      "source": {
+        "title": "Red Apple.jpg",
+        "author": "Abhijit Tembhekar from Mumbai, India",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/960px-Red_Apple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "apple",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Red and yellow variegated skin",
+            "Glossy surface with light reflections",
+            "Plump, rounded shape",
+            "Intact stem and no blemishes"
+          ],
+          "explanation": "The apple displays mature coloration (red with yellow tones), smooth skin, and firm structure. No signs of underripeness (e.g., green patches) or spoilage are visible. Common red apples like Honeycrisp or Gala typically appear ripe with this appearance."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "f794efc4579fcf9f22ac69ce100191220f65162ac44609adf059ed00102f5f11",
+          "prepared_image_sha256": "ea873b1e386d1337caf8c6f7ac64db4aab4bf8afe8c5d276e4a9e29f537a5f4d",
+          "prepared_width": 960,
+          "prepared_height": 870,
+          "elapsed_seconds": 19.607,
+          "inference_seconds": 19.5974,
+          "model_load_seconds": 0.003750125,
+          "output_tokens": 688,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "apple-green",
+      "file": "images/apple-green.jpg",
+      "sha256": "e57347e4304fc6851f6529bdbdac81a5c4ba4beff047ae8db710182722a035a5",
+      "split": "development",
+      "source_group": "commons-6",
+      "expected_status": "assessed",
+      "expected_fruit": "apple",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Mature-looking Granny Smith; green variety must not automatically mean unripe.",
+      "source": {
+        "title": "Granny Smith Chernihiv 2016.jpg",
+        "author": "Nickispeaki",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Granny_Smith_Chernihiv_2016.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Granny_Smith_Chernihiv_2016.jpg/960px-Granny_Smith_Chernihiv_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": [
+            48,
+            0,
+            470,
+            433
+          ],
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "apple",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Green skin",
+            "Smooth surface",
+            "Round shape",
+            "Intact stem"
+          ],
+          "explanation": "Green skin, smooth surface, round shape, intact stem. No visible signs of spoilage. Green skin indicates maturity for common green apple varieties."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "e57347e4304fc6851f6529bdbdac81a5c4ba4beff047ae8db710182722a035a5",
+          "prepared_image_sha256": "92574a45720ce8dd05499c124a70d14d032915e322851813d21458f03c833aa4",
+          "prepared_width": 422,
+          "prepared_height": 433,
+          "elapsed_seconds": 43.7445,
+          "inference_seconds": 43.7405,
+          "model_load_seconds": 0.001189583,
+          "output_tokens": 1627,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "orange-whole",
+      "file": "images/orange-whole.jpg",
+      "sha256": "5e5cd187ebd05755817b654b86be32c4fff444d9e1d30fcddd878a2a87dc8249",
+      "split": "development",
+      "source_group": "commons-24",
+      "expected_status": "assessed",
+      "expected_fruit": "orange",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Fully orange mature-looking peel; provisional visual ripeness label.",
+      "source": {
+        "title": "Orange-Whole-&-Split.jpg",
+        "author": "Evan-Amos",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Orange-Whole-%26-Split.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Orange-Whole-%26-Split.jpg/960px-Orange-Whole-%26-Split.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": [
+            0,
+            0,
+            480,
+            501
+          ],
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "orange",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Bright orange color",
+            "Smooth textured peel",
+            "Round shape",
+            "Green stem"
+          ],
+          "explanation": "Single orange with uniform bright orange color, smooth peel, round shape, and green stem. No visible spoilage or immaturity signs."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "5e5cd187ebd05755817b654b86be32c4fff444d9e1d30fcddd878a2a87dc8249",
+          "prepared_image_sha256": "e198541a261a0ac42ef5054c482005d4fbd1a684e7650876b0383ab142518d86",
+          "prepared_width": 480,
+          "prepared_height": 501,
+          "elapsed_seconds": 14.9724,
+          "inference_seconds": 14.9642,
+          "model_load_seconds": 0.00108075,
+          "output_tokens": 492,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "orange-green",
+      "file": "images/orange-green.jpg",
+      "sha256": "1b0f10c3cf8bd909b61dac6d39fdb4fa71a4039de0fe711e028afea175a9fc91",
+      "split": "development",
+      "source_group": "commons-11",
+      "expected_status": "assessed",
+      "expected_fruit": "orange",
+      "fruit_aliases": [],
+      "expected_ripeness": "unripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Small green fruit on tree; source identifies immature orange, but color alone is not universally diagnostic.",
+      "source": {
+        "title": "Unripe orange.jpg",
+        "author": "Deishini Mariam",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Unripe_orange.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Unripe_orange.jpg/960px-Unripe_orange.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": null,
+      "error": {
+        "code": "invalid_model_output",
+        "message": "The model returned an empty or truncated assessment. Retry explicitly."
+      }
+    },
+    {
+      "id": "strawberry-whole",
+      "file": "images/strawberry-whole.jpg",
+      "sha256": "0f2e4e601df5462fc46e3f1397135b95c53847d295150d0a6bb7a23bfc931f64",
+      "split": "development",
+      "source_group": "commons-13",
+      "expected_status": "assessed",
+      "expected_fruit": "strawberry",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Red berry with mature-looking shape and seeds.",
+      "source": {
+        "title": "Garden strawberry (Fragaria × ananassa) single2.jpg",
+        "author": "\nIvar Leidus",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg/960px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "strawberry",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Vibrant red color with glossy surface",
+            "Numerous dark seeds visible on skin",
+            "Attached green calyx with intact leaves",
+            "Plump, rounded shape"
+          ],
+          "explanation": "Strawberry displays bright red hue, glossy texture, and intact green calyx, indicating normal maturity. No signs of spoilage or overripeness."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "0f2e4e601df5462fc46e3f1397135b95c53847d295150d0a6bb7a23bfc931f64",
+          "prepared_image_sha256": "339693965f6d47561cbda4f86c452cd21d90bdc4d1a0cdaec0715e1a68c8be7c",
+          "prepared_width": 960,
+          "prepared_height": 640,
+          "elapsed_seconds": 17.3502,
+          "inference_seconds": 17.3315,
+          "model_load_seconds": 0.016017791,
+          "output_tokens": 581,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "strawberry-half",
+      "file": "images/strawberry-half.jpg",
+      "sha256": "54124a0897dcec74b247bf05d718df51d1ed97a63225a84c749def99a9fdd16d",
+      "split": "development",
+      "source_group": "commons-14",
+      "expected_status": "assessed",
+      "expected_fruit": "strawberry",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "One cut half with red exterior and light central flesh.",
+      "source": {
+        "title": "Garden strawberry (Fragaria × ananassa) halved.jpg",
+        "author": "\nIvar Leidus",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_halved.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_halved.jpg/960px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_halved.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "strawberry",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Red outer skin",
+            "Red flesh interior",
+            "Brown central spot",
+            "Green calyx"
+          ],
+          "explanation": "Strawberry shows red skin indicating ripeness; brown central area is oxidation from cutting, not spoilage."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "54124a0897dcec74b247bf05d718df51d1ed97a63225a84c749def99a9fdd16d",
+          "prepared_image_sha256": "b23086a682e3ee82c741fc2296417825c67980a66984159d311efaad06c1489c",
+          "prepared_width": 960,
+          "prepared_height": 640,
+          "elapsed_seconds": 39.4891,
+          "inference_seconds": 39.4803,
+          "model_load_seconds": 0.002354833,
+          "output_tokens": 1470,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "avocado-cut",
+      "file": "images/avocado-cut.jpg",
+      "sha256": "9a22ac9014b6fbb0cbf40deb6d42a37f3d56fcaa5bbdcfefa7fbbdbd154dd09b",
+      "split": "development",
+      "source_group": "commons-19",
+      "expected_status": "assessed",
+      "expected_fruit": "avocado",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Visible yellow-green flesh supports provisional ripe appearance; texture cannot be assessed.",
+      "source": {
+        "title": "Ripe Avocado.jpg",
+        "author": "Hajia Hijjah",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Ripe_Avocado.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Ripe_Avocado.jpg/960px-Ripe_Avocado.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "avocado",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Green outer skin",
+            "Vibrant yellow-green flesh",
+            "Brown seed",
+            "Minor browning at cut edge"
+          ],
+          "explanation": "Halved avocado with green skin, yellow-green flesh, and a brown seed. No visible mold or decay; minor browning at cut surface is normal oxidation."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "9a22ac9014b6fbb0cbf40deb6d42a37f3d56fcaa5bbdcfefa7fbbdbd154dd09b",
+          "prepared_image_sha256": "a13abb9b927b7ce98ae442433908ae0bb7be6e1f27e830be670dba5e940ca2a6",
+          "prepared_width": 960,
+          "prepared_height": 960,
+          "elapsed_seconds": 22.9777,
+          "inference_seconds": 22.9619,
+          "model_load_seconds": 0.005478708,
+          "output_tokens": 805,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "avocado-half",
+      "file": "images/avocado-half.jpg",
+      "sha256": "184bae1327791c3eac1c2b9b36d4ae9106e8042d9d9650401da3abb749632172",
+      "split": "development",
+      "source_group": "commons-27",
+      "expected_status": "assessed",
+      "expected_fruit": "avocado",
+      "fruit_aliases": [],
+      "expected_ripeness": "ripe",
+      "expected_visible_spoilage": "none_observed",
+      "label_note": "Cut avocado with pale yellow-green flesh; provisional visible label, not a firmness measurement.",
+      "source": {
+        "title": "Ugandan avocado half.jpg",
+        "author": "Denis kasozi",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Ugandan_avocado_half.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Ugandan_avocado_half.jpg/960px-Ugandan_avocado_half.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": {
+        "assessment": {
+          "status": "assessed",
+          "fruit_name": "avocado",
+          "ripeness": "ripe",
+          "visible_spoilage": "none_observed",
+          "observations": [
+            "Halved avocado with green flesh and pale yellow core",
+            "Dark purple skin at the cut edge",
+            "Smooth, firm surface",
+            "Placed on banana leaf"
+          ],
+          "explanation": "Avocado halved, showing typical ripe flesh color (green to yellow) and dark skin. No signs of spoilage. Ripe avocados exhibit these visual cues."
+        },
+        "metadata": {
+          "model": "qwen3-vl:4b",
+          "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+          "prompt_version": "fruit-v3",
+          "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+          "image_sha256": "184bae1327791c3eac1c2b9b36d4ae9106e8042d9d9650401da3abb749632172",
+          "prepared_image_sha256": "25d816b54702c1f67928f1fcc5baaae854fab77f1fe72556759698c9bd19d5d0",
+          "prepared_width": 960,
+          "prepared_height": 640,
+          "elapsed_seconds": 23.4224,
+          "inference_seconds": 23.4129,
+          "model_load_seconds": 0.001851042,
+          "output_tokens": 812,
+          "generation_options": {
+            "temperature": 0,
+            "num_ctx": 8192,
+            "num_predict": 2048,
+            "think": true
+          },
+          "thinking_output_present": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "multiple-bananas",
+      "file": "images/multiple-bananas.jpg",
+      "sha256": "5a961e2b2cd7e1c6e4a522bfbd44e79d631b3ee3fe11318d426bbe9c0a5971a2",
+      "split": "development",
+      "source_group": "commons-1",
+      "expected_status": "multiple_fruits",
+      "expected_fruit": null,
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "uncertain",
+      "label_note": "Many fruit instances; reject without choosing the main one.",
+      "source": {
+        "title": "Green banana.jpg",
+        "author": "Kellychard kariuki",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Green_banana.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Green_banana.jpg/960px-Green_banana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": null,
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": null,
+      "error": {
+        "code": "invalid_model_output",
+        "message": "The model response failed assessment validation. Retry explicitly."
+      }
+    },
+    {
+      "id": "nonfruit-checkerboard",
+      "file": "images/nonfruit-checkerboard.jpg",
+      "sha256": "e8f63097d6eb176935a228ef790ca432d756e5cfbe69bb3519872f45505abb11",
+      "split": "development",
+      "source_group": "nonfruit-checkerboard",
+      "expected_status": "no_fruit",
+      "expected_fruit": null,
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "uncertain",
+      "label_note": "Synthetic geometric control; not a natural photograph.",
+      "source": {
+        "title": "Synthetic checkerboard control",
+        "author": "Project-generated test fixture",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "description_url": null,
+        "download_url": null,
+        "modifications": "Generated geometric checkerboard; no source photograph."
+      },
+      "result": null,
+      "error": {
+        "code": "invalid_model_output",
+        "message": "The model returned an empty or truncated assessment. Retry explicitly."
+      }
+    },
+    {
+      "id": "unreadable-banana",
+      "file": "images/unreadable-banana.jpg",
+      "sha256": "0cfd88ad32c0340e02b87475aa92f0b657558ee5e664743c6b1c4328cd15b580",
+      "split": "development",
+      "source_group": "commons-0",
+      "expected_status": "unclear_image",
+      "expected_fruit": null,
+      "fruit_aliases": [],
+      "expected_ripeness": "uncertain",
+      "expected_visible_spoilage": "uncertain",
+      "label_note": "Synthetic severe loss of image detail; kept in same split as original.",
+      "source": {
+        "title": "Banana-Single.jpg",
+        "author": "Evan-Amos",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description_url": "https://commons.wikimedia.org/wiki/File:Banana-Single.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/960px-Banana-Single.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "modifications": {
+          "thumbnail_size": "Wikimedia 960px thumbnail (actual dimensions retained)",
+          "crop_xyxy": null,
+          "degradation": "downsample_3x3_then_upscale",
+          "encoding": "RGB JPEG quality 95"
+        }
+      },
+      "result": null,
+      "error": {
+        "code": "timeout",
+        "message": "Ollama timed out. Retry explicitly or check available memory and CPU/GPU load."
+      }
+    }
+  ],
+  "label_basis": "Implementation-assistant visual review before inference; provisional appearance labels, not expert, laboratory maturity, or food-safety ground truth.",
+  "summary": {
+    "cases": 13,
+    "operational_errors": 4,
+    "invalid_outputs": 3,
+    "status": {
+      "correct": 9,
+      "total": 13,
+      "rate": 0.6923
+    },
+    "fruit_identification": {
+      "correct": 9,
+      "total": 10,
+      "rate": 0.9
+    },
+    "ripeness_on_assessable_images": {
+      "correct": 9,
+      "total": 10,
+      "rate": 0.9
+    },
+    "abstentions_on_assessable_ripeness": 0,
+    "uncertainty_on_ambiguous_ripeness": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "visible_spoilage": {
+      "correct": 8,
+      "total": 10,
+      "rate": 0.8
+    },
+    "scene_rejection": {
+      "correct": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    "first_inference_seconds": 14.7177,
+    "subsequent_median_seconds": 23.1874,
+    "max_inference_seconds": 43.7405
+  }
+}

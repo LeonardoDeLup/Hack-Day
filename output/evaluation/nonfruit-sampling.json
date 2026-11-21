@@ -1,0 +1,38 @@
+{
+  "assessment": {
+    "status": "no_fruit",
+    "fruit_name": null,
+    "ripeness": "uncertain",
+    "visible_spoilage": "uncertain",
+    "observations": [
+      "Checkered pattern of blue and light blue squares; no fruit visible"
+    ],
+    "explanation": "No culinary fruit present; image contains only a geometric checkered design."
+  },
+  "metadata": {
+    "model": "qwen3-vl:4b",
+    "model_digest": "a1b29c246319cdcb1f3842f36d29f198f737c0cf516ba1bcba34b1b974e87980",
+    "prompt_version": "fruit-v3",
+    "prompt_sha256": "341c378dc76aa9107e8a41546f61bce7fe0a29a05a1be4b55d9b90ce39c5371a",
+    "image_sha256": "e8f63097d6eb176935a228ef790ca432d756e5cfbe69bb3519872f45505abb11",
+    "prepared_image_sha256": "2dbf40e0ffaf09d8da0c7db49f596f0a050b19556faa05d645ea85dd638e867b",
+    "prepared_width": 600,
+    "prepared_height": 400,
+    "elapsed_seconds": 62.9895,
+    "inference_seconds": 62.961,
+    "model_load_seconds": 0.005223625,
+    "output_tokens": 2357,
+    "generation_options": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "seed": 1234,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "think": true
+    },
+    "thinking_output_present": true
+  }
+}
